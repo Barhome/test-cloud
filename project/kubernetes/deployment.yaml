@@ -3,14 +3,14 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: test_techtrends
-  name: test_techtrends
+    app: test-techtrends
+  name: test-techtrends
   namespace: sandbox
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test_techtrends
+      app: test-techtrends
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -19,12 +19,12 @@ spec:
   template:
     metadata:
       labels:
-        app: test_techtrends
+        app: test-techtrends
     spec:
       containers:
-      - image: barhome/test_techtrends:latest
+      - image: barhome/test-techtrends:latest
         imagePullPolicy: IfNotPresent
-        name: test_techtrends
+        name: test-techtrends
         ports:
         - containerPort: 3111
           protocol: TCP

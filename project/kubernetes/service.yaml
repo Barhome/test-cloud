@@ -3,8 +3,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: test_techtrends
-  name: test_techtrends
+    app: test-techtrends
+  name: test-techtrends
   namespace: sandbox
 spec:
   ports:
@@ -13,7 +13,7 @@ spec:
     protocol: TCP
     targetPort: 3111
   selector:
-    app: test_techtrends
+    app: test-techtrends
   type: ClusterIP
 status:
   loadBalancer: {}

@@ -34,4 +34,4 @@ jobs:
           file: ./project/techtrends/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: barhome/test_techtrends
+          tags: barhome/test-techtrends

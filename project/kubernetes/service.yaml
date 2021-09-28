@@ -14,6 +14,6 @@ spec:
     targetPort: 3111
   selector:
     app: test-techtrends
-  type: ClusterIP
+  type: NodePort
 status:
   loadBalancer: {}

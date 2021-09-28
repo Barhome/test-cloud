@@ -28,14 +28,7 @@ spec:
         ports:
         - containerPort: 3111
           protocol: TCP
-        livenessProbe:
-           httpGet:
-             path: {{ .Values.livenessProbe.path}}
-             port: 3111
-        readinessProbe:
-           httpGet:
-             path: {{ .Values.readinessProbe.path}}
-             port: 3111
+        
         resources:
           requests:
             memory: {{ .Values.resources.requests.memory}}

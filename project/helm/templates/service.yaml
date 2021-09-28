@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-techtrends
+  name: test-techtrends
+  namespace: {{ .Values.namespace.name}}
+spec:
+  ports:
+  - name: 4111-3111
+    port: {{ .Values.service.port}}
+    protocol: {{ .Values.service.protocol}}
+    targetPort: {{ .Values.service.targetPort}}
+  selector:
+    app: test-techtrends
+  type: {{ .Values.service.type}}
+status:
+  loadBalancer: {}

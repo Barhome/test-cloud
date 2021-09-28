@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test_techtrends
+  name: test_techtrends
+  namespace: sandbox
+spec:
+  ports:
+  - name: 4111-3111
+    port: 4111
+    protocol: TCP
+    targetPort: 3111
+  selector:
+    app: test_techtrends
+  type: ClusterIP
+status:
+  loadBalancer: {}

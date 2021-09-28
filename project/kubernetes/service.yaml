@@ -12,6 +12,7 @@ spec:
     port: 4111
     protocol: TCP
     targetPort: 3111
+    nodePort: 30009
   selector:
     app: test-techtrends
   type: NodePort
